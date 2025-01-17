@@ -1,7 +1,7 @@
 """
-basic_generator_case.py
+basic_producer_tesfa.py
 
-Generate some streaming buzz messages. 
+Generate some streaming space exploration messages. 
 """
 
 #####################################
@@ -58,21 +58,21 @@ def get_message_interval() -> int:
 # Define global variables
 #####################################
 
-# Define some lists for generating buzz messages
-ADJECTIVES: list = ["amazing", "funny", "boring", "exciting", "weird"]
-ACTIONS: list = ["found", "saw", "tried", "shared", "loved"]
-TOPICS: list = ["a movie", "a meme", "an app", "a trick", "a story"]
+# Define some lists for generating space exploration messages
+ADJECTIVES: list = ["amazing", "dangerous", "thrilling", "unexpected", "groundbreaking"]
+ACTIONS: list = ["Landed on", "discovered water on", "saw aliens on", "built a base on", "escaped from"]
+Locations: list = ["Mars", "Moon", "Jupiter", "Neptune", "pluto"]
 
 #####################################
-# Define a function to generate buzz messages
+# Define a function to generate space exploration messages
 #####################################
 
 
 def generate_messages():
     """
-    Generate a stream of buzz messages.
+    Generate a stream of space exploration messages.
 
-    This function uses a generator, which yields one buzz at a time.
+    This function uses a generator, which yields one message at a time.
     Generators are memory-efficient because they produce items on the fly
     rather than creating a full list in memory.
 
@@ -82,8 +82,8 @@ def generate_messages():
     while True:
         adjective = random.choice(ADJECTIVES)
         action = random.choice(ACTIONS)
-        topic = random.choice(TOPICS)
-        yield f"I just {action} {topic}! It was {adjective}."
+        location = random.choice(LOCATIONS)
+        yield f"An astronaut {action} {location}! It was {adjective}."
 
 
 #####################################
@@ -103,7 +103,7 @@ def main() -> None:
     that explains what the function does.
     """
 
-    logger.info("START producer...")
+    logger.info("START space producer...")
     logger.info("Hit CTRL c (or CMD c) to close.")
     
     # Call the function we defined above to get the message interval
