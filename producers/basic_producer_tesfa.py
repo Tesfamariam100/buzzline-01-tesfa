@@ -61,7 +61,7 @@ def get_message_interval() -> int:
 # Define some lists for generating space exploration messages
 ADJECTIVES: list = ["amazing", "dangerous", "thrilling", "unexpected", "groundbreaking"]
 ACTIONS: list = ["Landed on", "discovered water on", "saw aliens on", "built a base on", "escaped from"]
-Locations: list = ["Mars", "Moon", "Jupiter", "Neptune", "pluto"]
+LOCATIONS: list = ["Mars", "Moon", "Jupiter", "Neptune", "pluto"]
 
 #####################################
 # Define a function to generate space exploration messages
